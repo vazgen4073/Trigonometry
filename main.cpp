@@ -20,7 +20,7 @@ int main()
     triangle_info();
     rectangle_info();
     Triangle tr;
-    tr.calculate_area_using_corner();
+    std::cout << tr.calculate_area_using_corner();
     int a = 7;
     a = 9;
 

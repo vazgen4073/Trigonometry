@@ -29,18 +29,18 @@ private:
     void set_alpha_corner(long double alpha_corner);
 
 private:
-    bool is_init_a();
-    bool is_init_b();
-    bool is_init_c();
-    bool is_init_heigth();
-    bool is_init_alpha_corner();
+    bool is_init_a() const;
+    bool is_init_b() const;
+    bool is_init_c() const;
+    bool is_init_heigth() const;
+    bool is_init_alpha_corner() const;
 
 private:
-    long double get_a();
-    long double get_b();
-    long double get_c();
-    long double get_heigth();
-    long double get_alpha_corner();
+    long double get_a() const;
+    long double get_b() const;
+    long double get_c() const;
+    long double get_heigth() const;
+    long double get_alpha_corner() const;
 
 private:
     long double input();
@@ -50,11 +50,11 @@ private:
     long double _a, _b, _c;
     long double _heigth;
     long double _alpha_corner;
-    bool a_is_init = false;
-    bool b_is_init = false;
-    bool c_is_init = false;    
-    bool heigth_is_init = false;    
-    bool alpha_corner_is_init = false;
+    bool _a_is_init = false;
+    bool _b_is_init = false;
+    bool _c_is_init = false;
+    bool _heigth_is_init = false;
+    bool _alpha_corner_is_init = false;
 
     const double PI = 3.14159265;
 };

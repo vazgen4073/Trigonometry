@@ -36,7 +36,7 @@ std::string Triangle::calculate_volume()
         return "You must initialize Triangle parameters before calculating\n";
     }
     assert(s > 0);
-    if(!is_init_heigth()) {
+    if (!is_init_heigth()) {
         std::cout << input_message() + " heigth in meters\n";
         set_heigth(input());
     }
@@ -89,104 +89,113 @@ long double Triangle::get_area_using_heigth()
 {
     return (1 / 2) * _heigth * _a;
 }
+
+/////////////////
 /////////////////
 //check functions
-bool Triangle::is_init_a()
+bool Triangle::is_init_a() const
 {
-    if (a_is_init)
+    if (_a_is_init)
         return true;
     return false;
 }
 
-bool Triangle::is_init_b()
+bool Triangle::is_init_b() const
 {
-    if (b_is_init)
+    if (_b_is_init)
         return true;
     return false;
 }
 
-bool Triangle::is_init_c()
+bool Triangle::is_init_c() const
 {
-    if (c_is_init)
+    if (_c_is_init)
         return true;
     return false;
 }
 
-bool Triangle::is_init_heigth()
+bool Triangle::is_init_heigth() const
 {
-    if (heigth_is_init)
+    if (_heigth_is_init)
         return true;
     return false;
 }
 
-bool Triangle::is_init_alpha_corner()
+bool Triangle::is_init_alpha_corner() const
 {
-    if (alpha_corner_is_init)
+    if (_alpha_corner_is_init)
         return true;
     return false;
 }
 
 /////////
+/////////
 //getters
-long double Triangle::get_a()
+long double Triangle::get_a() const
 {
+    assert(is_init_a());
     return _a;
 }
 
-long double Triangle::get_b()
+long double Triangle::get_b() const
 {
+    assert(is_init_b());
     return _b;
 }
 
-long double Triangle::get_c()
+long double Triangle::get_c() const
 {
+    assert(is_init_c());
     return _c;
 }
 
-long double Triangle::get_heigth()
+long double Triangle::get_heigth() const
 {
+    assert(is_init_heigth());
     return _heigth;
 }
 
-long double Triangle::get_alpha_corner()
+long double Triangle::get_alpha_corner() const
 {
+    assert(is_init_alpha_corner());
     return _alpha_corner;
 }
 
 /////////
+/////////
 //setters
 void Triangle::set_a(long double a)
 {
-    assert(!a_is_init);
-    a_is_init = true;
+    assert(!_a_is_init);
+    _a_is_init = true;
     _a = a;
 }
 
 void Triangle::set_b(long double b)
 {
-    assert(!b_is_init);
-    b_is_init = true;
+    assert(!_b_is_init);
+    _b_is_init = true;
     _b = b;
 }
 
 void Triangle::set_c(long double c)
 {
-    assert(!c_is_init);
-    c_is_init = true;
+    assert(!_c_is_init);
+    _c_is_init = true;
     _c = c;
 }
 
 void Triangle::set_heigth(long double heigth)
 {
-    assert(!heigth_is_init);
-    heigth_is_init = true;
+    assert(!_heigth_is_init);
+    _heigth_is_init = true;
     _heigth = heigth;
 }
 
 void Triangle::set_alpha_corner(long double alpha_corner)
 {
-    assert(!alpha_corner_is_init);
-    alpha_corner_is_init = true;
+    assert(!_alpha_corner_is_init);
+    _alpha_corner_is_init = true;
     _alpha_corner = alpha_corner;
 }
 
