@@ -1,28 +1,14 @@
-#include "rectangle.hpp"
-#include "triangle.hpp"
+#include "Rectangle.hpp"
+#include "Trigonometry.hpp"
 
-void rectangle_info()
-{
-    //   Rectangle rc;
-    //    rc.calculate_area();
-}
-
-void triangle_info()
-{
-    //   Triangle tr;
-    //    std::cout << tr.calculate_area_using_corner();
-    //   std::cout << tr.calculate_volume();
+void trig_info(Trigonometry * obj) {
+	obj->print_info();
 }
 
 int main()
 {
+	Trigonometry *obj = new Rectangle();
+	trig_info(obj);
 
-    triangle_info();
-    rectangle_info();
-    Triangle tr;
-    std::cout << tr.calculate_area_using_corner();
-    int a = 7;
-    a = 9;
-
-    return 0;
+	return 0;
 }
